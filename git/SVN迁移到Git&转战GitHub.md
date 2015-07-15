@@ -27,3 +27,20 @@ commit 70531fe2f240430a651bd7bdfd954bafcb562769
 ```bash
 git filter-branch -f --env-filter "GIT_AUTHOR_NAME='Newname'; GIT_AUTHOR_EMAIL='Newemail'; GIT_COMMITTER_NAME='Newname'; GIT_COMMITTER_EMAIL='Newemail';" HEAD
 ```
+
+## 关联github远程仓库
+
+```bash
+$ git remote add origin git@github.com:crossyou/test.git
+```
+
+## 提交github远程仓库
+
+```bash
+$ git push -u origin master
+```
+
+## 参考资料
+
+* [SVN迁移到Git的过程（+ 一些技巧）](http://www.blogjava.net/lishunli/archive/2012/01/15/368562.html)
+* [git filter-branch使用方法](https://ruby-china.org/topics/7820)
