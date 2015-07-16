@@ -25,7 +25,38 @@ commit 70531fe2f240430a651bd7bdfd954bafcb562769
 以上log中Author的name为sobird，email为<sobird@03cbcded-9dd1-4c32-97f2-e9e95ae9a827>，可能并不是github对应的name和email，那么通过下面的一行命令即可批量更新。
 
 ```bash
-git filter-branch -f --env-filter "GIT_AUTHOR_NAME='Newname'; GIT_AUTHOR_EMAIL='Newemail'; GIT_COMMITTER_NAME='Newname'; GIT_COMMITTER_EMAIL='Newemail';" HEAD
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='sobird'; GIT_AUTHOR_EMAIL='crossyou2009@gmail.com'; GIT_COMMITTER_NAME='sobird'; GIT_COMMITTER_EMAIL='crossyou2009@gmail.com';" HEAD
+```
+
+## 整理分支
+在推送github之前，需要整理一下分之和标签.
+
+移动标签，把它们从奇怪的远程分支变成实际的标签，然后把剩下的分支移动到本地。
+
+```bash
+$ cp -Rf .git/refs/remotes/tags/* .git/refs/tags/
+$ rm -Rf .git/refs/remotes/tags
+```
+
+该命令将原本以tag/ 开头的远程分支的索引变成真正的（轻巧的）标签。接下来，把refs/remotes 下面剩下的索引变成本地分支：
+```bash
+$ cp -Rf .git/refs/remotes/* .git/refs/heads/
+$ rm -Rf .git/refs/remotes
+```
+
+现在所有的旧分支都变成真正的Git 分支，所有的旧标签也变成真正的Git 标签。最后，一项工作就是把新建的Git服务器添加为远程服务器并且向它推送。为了让所有的分支和标签都得到上传，我们使用这条命令：
+
+```bash
+$ git push origin –all
+```
+
+推送所有tag到github
+$ git push –tags
+
+## git ignores
+
+```bash
+$ git svn show-ignore > .git/info/exclude
 ```
 
 ## 关联github远程仓库
