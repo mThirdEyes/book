@@ -1,4 +1,4 @@
-# mac下编译安装svn-1.7.20.md
+# mac下编译安装svn-1.7.20
 
 ## 背景
 作为一名有节操的青年，时不时折腾一下，绝对不是一件坏事情，话说本人的mac系统版本为10.10.3(14D136)，已自带了svn(1.7.19版本)。
@@ -58,4 +58,4 @@ MacBookPro:subversion-1.7.20 root# which svn
 ```
 
 ## 参考
-[安装日志]()
+[安装日志](https://github.com/crossyou/book/blob/master/_static/svn-compile-install.log)
