@@ -51,7 +51,7 @@ $ git push origin –all
 ```
 
 推送所有tag到github
-$ git push –tags
+$ git push origin --tags
 
 ## git ignores
 

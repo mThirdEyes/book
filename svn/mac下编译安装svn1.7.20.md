@@ -17,7 +17,7 @@ tar xzvf neon-0.30.1.tar.gz
 
 cd neon-0.30.1
 
-./configure -prefix=/usr/local/neon -enable-shared
+./configure -prefix=/usr/local/neon -enable-shared --with-ssl
 # 编译安装
 make && make install
 ```
