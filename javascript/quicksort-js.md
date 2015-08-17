@@ -108,3 +108,8 @@ var quickSort = function(arr) {
 var arr = [85, 24, 63, 45, 17, 31, 96, 50];
 quickSort(arr);
 ```
+
+[查看完整代码]()
+
+# 参考资料
+[快速排序（Quicksort）的Javascript实现](http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
