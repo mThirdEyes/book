@@ -113,3 +113,4 @@ quickSort(arr);
 
 # 参考资料
 [快速排序（Quicksort）的Javascript实现](http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html)
+[各种排序动画演示](http://jsdo.it/norahiko/oxIy/fullscreen)
