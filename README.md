@@ -3,6 +3,7 @@ sobird的网络学习笔记，多为自己实践、尝试积累的，时效较�
 
 ## 最近笔记
 
+* [HTMl5的sessionStorage和localStorage](https://github.com/crossyou/book/tree/master/html5/webstorage)
 * [冒泡排序（Bubblesort）的Javascript实现](https://github.com/crossyou/book/tree/master/javascript/bubblesort)
 * [快速排序（Quicksort）的Javascript实现](https://github.com/crossyou/book/tree/master/javascript/quicksort)
 * [mac下编译安装svn-1.7.20](https://github.com/crossyou/book/blob/master/svn/mac%E4%B8%8B%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85svn1.7.20.md)
