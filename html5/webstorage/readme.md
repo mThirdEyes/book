@@ -138,11 +138,12 @@ function handle_storage(e){
 
 storage事件对象的具体属性如下表：
 
-|| Property || Type || Description ||
-|| key || String || The named key that was added, removed, or moddified ||
-|| oldValue || Any || The previous value(now overwritten), or null if a new item was added ||
-|| newValue || Any || The new value, or null if an item was added ||
-|| url/uri || String || The page that called the method that triggered this change ||
+| Property | Type | Description |
+| ------------- |:-------------:| -----:|
+| key | String | The named key that was added, removed, or moddified |
+| oldValue | Any | The previous value(now overwritten), or null if a new item was added |
+| newValue | Any | The new value, or null if an item was added |
+| url/uri | String | The page that called the method that triggered this change |
 
 ## Web Storage Demo
 * [HTML5 Demos: Storage](http://html5demos.com/storage)
