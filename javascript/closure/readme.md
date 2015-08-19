@@ -85,9 +85,8 @@ for(var i = 0, l = elems.length; i < l; i++)  {
 }
 ```
 
-## 用途
-
-
+## 注意
+由于闭包会使函数中的变量保存在内存中，增大内存开销，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。
 
 ## 参考资料
 * [How do JavaScript closures work?](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
