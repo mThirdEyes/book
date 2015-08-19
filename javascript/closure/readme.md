@@ -5,7 +5,7 @@
 ## 作用域(scope)
 要理解闭包，首先必须理解JavaScript特殊的作用域。
 
-avaScript的作用域的特殊之处，就在于函数内部可以访问函数外部的作用域，反之，函数外部却无法访问函数内部的作用域。
+JavaScript的作用域的特殊之处，就在于函数内部可以访问函数外部的作用域，反之，函数外部却无法访问函数内部的作用域。
 
 ```javascript
 var a = 1; // 在函数外部声明变量a
@@ -51,8 +51,41 @@ function foo(x) {
 }
 
 var bar = foo(2); // bar is now a closure.
-bar(10);
+bar(10); // 16
 ```
+
+一个最简单的闭包例子：
+
+```javascript
+var a = 10;
+
+function test() {
+
+  console.log(a); // will output 10
+
+  console.log(b); // will output 6
+
+}
+
+var b = 6;
+
+test();
+```
+
+循环绑定事件的例子
+```javascript
+var elems=document.getElementsByTagName('li');
+
+for(var i = 0, l = elems.length; i < l; i++)  {
+  elems[i].onclick = function(i) {
+    return (function(){ // 闭包
+      alert(i);
+    });
+  }(i);
+}
+```
+
+## 用途
 
 
 
