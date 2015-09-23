@@ -31,6 +31,8 @@ import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa
 ### Less
 > Less 语法高亮插件
 
+### Markdown Preview
+> Markdown 格式预览插件
 
 ##  参考
 
