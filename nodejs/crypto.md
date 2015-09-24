@@ -239,6 +239,6 @@ var md5 = function(data){
     var hash = crypto.createHash('md5');
     var encoding = typeof data === 'string' ? 'utf8' : 'binary';
     hash.update(data, encoding);
-    return md5sum.digest('hex');
+    return hash.digest('hex');
 }
 ```
