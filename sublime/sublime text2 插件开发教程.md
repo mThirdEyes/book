@@ -65,7 +65,7 @@ view.run_command('example')
 8、这样下来一个插件差不多就开发完了，你可以将插件文件夹打包发给需要安装的同学。当然这种方式太麻烦了，现在有各`Package Control`的插件，专门来管理插件安装的，相信你已经安装了。可以通过下面的步骤进行：
 
 * 你需要有个github帐号，并fork https://github.com/wbond/package_control_channel
-* 通过git clone命令下载你fork完的地址，如: git@github.com:welefen/package_control_channel.git
+* 通过git clone命令下载你fork完的地址，如: git@github.com:xxxx/package_control_channel.git
 * 修改repositories.json这个文件，把你的插件名称和对应的github项目地址添加进去
 * ci并push到你的package control里，然后通过pull request推到官方的github里，如果他们审批通过了，那么你的插件就会放到package control里，别人就可以通过install直接安装了
 
