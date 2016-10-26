@@ -88,3 +88,47 @@ if(parity[mod] != idcard.charAt[17]){
 }
 
 ```
+
+## 身份证号生成
+既然我们已经知道了身份证的校验算法，那么我们不妨就撸一段(随机)生成身份证号码的代码练练手。
+```javascript
+/**
+ * 创建一个有效的身份证号码
+ *
+ * @param  String area     6位地址码：110108(北京市海淀区)
+ * @param  String birthday 8位生日码：19800101 (1980年1月1日)
+ * @param  String sex      性别码：1男性，0为女性
+ * @return String idcard   有效身份证号码        
+ */
+function createIdCard(area, birthday, sex) {
+	var seq = randomNum(1, 998);
+	var c1 = seq % 2;
+	if(c1 != sex) {
+		seq++;
+	}
+	seq = (''+(1000+seq)).substr(1,3);
+
+	return checkId(area + '' + birthday + seq);
+}
+
+// 随机生成指定范围内的数字
+function randomNum (min, max) {
+    return Math.round(Math.random()*(max-min) + min);
+}
+
+function checkId (itself) {
+	// 校验码
+	var stard = '10X98765432';
+
+	var sum = 0;
+	for (var i = 17; i > 0; i--) {
+	    sum += (Math.pow(2, i)%11)*itself[17-i];
+	}
+	var mod = sum%11;
+	var last = stard[mod];
+
+	return itself + last;
+}
+
+createIdCard(110108, 19800101, 0);
+```
